@@ -3,10 +3,6 @@ import matplotlib.pyplot as plt
 import itertools
 import scipy
 import statsmodels.api as sm
-<<<<<<< HEAD
-
-=======
->>>>>>> 6844f1ef3994931f16a75400e1166f659531104d
 
 class ZipCode_TSA:
 
