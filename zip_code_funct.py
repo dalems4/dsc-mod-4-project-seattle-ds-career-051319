@@ -47,7 +47,8 @@ class ZipCode_TSA():
                                 order=[2, 2, 2],
                                 seasonal_order=[2, 2, 2, 1],
                                 enforce_stationarity=False,
-                                enforce_invertibility=False)
+                                enforce_invertibility=False, 
+                                freq='MS')
         output = ARIMA_MODEL.fit()
         return output
 
@@ -56,7 +57,7 @@ class ZipCode_TSA():
     #     pred_self_conf = pred.conf_int()
     #     return pred_self_conf
 
-    def prediction_conf(self, steps=6):
+    def prediction_conf(self, steps=16):
         # Get forecast 6 steps ahead in future
         prediction = self.arima_model().get_forecast(steps)
         # Get confidence intervals of forecasts
